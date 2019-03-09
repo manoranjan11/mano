@@ -1,0 +1,38 @@
+#include <iostream>
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+	int tube[100]={0};
+	int c=1,opt,i=-1;
+	while(c)
+	{   
+		std::cout<<"\n1.New people\n2.Kick out\n3.Exit";
+		std::cout<<"\nEnter the opton :";
+		std::cin>>opt;
+		switch(opt)
+		{
+			case 1: if(i==100)
+				    std::cout<<"\nWait, the Tube is full.";
+				    else
+				    {tube[++i]=1;
+				     std::cout<<"\nOne person is added.";
+				    }
+                                    std::cout<<"\nNo. of people inside = "<<i+1;
+				    break;
+			case 2: if(i<0)
+				    std::cout<<"\nThe Tube is empty.";
+				    else
+				    {tube[i--]=0;
+				     std::cout<<"\nOne person is kicked out.";
+				    }
+                                    std::cout<<"\nNo. of people inside = "<<i+1;
+				    break;
+			case 3: exit(0);
+			default : std::cout<<"\nEnter a valid option.";         
+		}
+
+	}
+	return 0;
+}
