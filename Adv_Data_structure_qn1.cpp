@@ -1,10 +1,10 @@
-/* I tried really hard for solving the question. Saw into various resources. I inderstood
+/* I tried really hard for solving the question.I Saw into various resources. I inderstood
    the theory but really felt difficult to implement it as this was the first time I am using
    binary tree.
    
    The fact that each 2 digit integer occupies 2 indexes in the array made the problem more challenging.*/
    
- //  This is the function i could think of //
+ //  This is the function i could think of but it doesn't work for 2 digit numbers //
  int find_ind(string str, int s, int e)                  //constructing from lower level nodes
 { 
     if (s > e) 
