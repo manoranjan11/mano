@@ -5,16 +5,16 @@
 int main()
 {   
 	int tube[100]={0};
-	int c=1,opt,i=-1;
-	while(c)
+	int a=1,choice,i=-1;
+	while(a)
 	{   
-		std::cout<<"\n1.New people\n2.Kick out\n3.Exit";
+		std::cout<<"\n1.Add\n2.Remove\n3.Exit";
 		std::cout<<"\nEnter the opton :";
-		std::cin>>opt;
-		switch(opt)
+		std::cin>>choice;
+		switch(choice)
 		{
 			case 1: if(i==100)
-				    std::cout<<"\nWait, the Tube is full.";
+				    std::cout<<"\nTube is full.";
 				    else
 				    {tube[++i]=1;
 				     std::cout<<"\nOne person is added.";
@@ -25,12 +25,12 @@ int main()
 				    std::cout<<"\nThe Tube is empty.";
 				    else
 				    {tube[i--]=0;
-				     std::cout<<"\nOne person is kicked out.";
+				     std::cout<<"\nOne person is removed.";
 				    }
                                     std::cout<<"\nNo. of people inside = "<<i+1;
 				    break;
 			case 3: exit(0);
-			default : std::cout<<"\nEnter a valid option.";         
+			default : std::cout<<"\nEnter between 1 to 3.";         
 		}
 
 	}
