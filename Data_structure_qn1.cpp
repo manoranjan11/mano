@@ -1,9 +1,9 @@
-#include <iostream>
+#include <iostream>                                             //header files
 #include<stdio.h>
 #include <stdlib.h>
 using namespace std;
 
-struct node
+struct node							//structure initialisation
 { string url;
   struct node *next;	
 }*p;
@@ -15,7 +15,7 @@ void newurl()
   string url;
   cout<<"Enter the url : ";
   cin>>url;
-  p = new node;
+  p = new node;							//dynamic allocation
   p->url = url;
   if(end == NULL)
    p->next =  NULL;
@@ -25,10 +25,10 @@ void newurl()
    end = p;		
 }
 
-void goback()
+void previous()
 {
 	if(end==NULL)
-		cout<<"No Websites to show!!!";
+		cout<<"can't go still further!!!";
 	else
 	   {p=end; 
         end=end->next;
@@ -42,19 +42,23 @@ int main()
 	while(1)
 	{
 		cout<<"\n\n\"FOO Browser\"!\n\n\n";
+		
+		
         if(end!=NULL)
 	         cout<<"Welcome to "<<end->url;
-	cout<<"\n1.Enter a Url\n2.Go back\n3.Exit\n";
+		 
+	cout<<"\n1.Enter the Url\n2.previous\n3.Exit\n";
 	cout<<"Enter the option:";
+	
 	cin>>opt;
 
 		switch(opt)
 		{ case 1: newurl();
 				  break;
-		  case 2: goback();
+		  case 2: previous();
 				  break;
 	  	  case 3: exit(0);
-	  	  default: cout<<"\nEnter a valid option!";
+	  	  default: cout<<"\nEnter values from 1 to 3!";
 		  		  
 	    }
     }	
