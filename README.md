@@ -2,7 +2,6 @@
 abhiyaan/software app
 Submission for Team Abhiyaan
 ============================
-(Example)
 Name: MANORANJAN J
 Roll Number: NA17B112
 Previous Experience:
