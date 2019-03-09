@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import rospy
-from std_msgs.msg import Int32
+from std_msgs.msg import Int32                                              #importing packages
 
 
-pub = rospy.Publisher('battery_warning_light', Int32, queue_size =1)        
+pub = rospy.Publisher('battery_warning_light', Int32, queue_size =1)        #publishing to a channel
 value=0
 
 def callback(msg):
@@ -13,7 +13,7 @@ def callback(msg):
    
 
 def listener():
-   rospy.init_node('topic_subscriber')
+   rospy.init_node('topic_subscriber')                                       #initialisation of a subscriber
    sub = rospy.Subscriber('battery_level', Int32, callback)
    rate = rospy.Rate(1)
 
