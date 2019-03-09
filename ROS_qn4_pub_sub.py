@@ -3,7 +3,7 @@ import rospy
 from std_msgs.msg import Int32
 
 
-pub = rospy.Publisher('battery_warning_light', Int32, queue_size =1)
+pub = rospy.Publisher('battery_warning_light', Int32, queue_size =1)        
 value=0
 
 def callback(msg):
@@ -17,7 +17,7 @@ def listener():
    sub = rospy.Subscriber('battery_level', Int32, callback)
    rate = rospy.Rate(1)
 
-   #rospy.init_node('topic_publisher')
+   
    c=0   
    while not rospy.is_shutdown():
       count = 1
@@ -33,3 +33,6 @@ def listener():
              pub.publish(count)
   
       rate.sleep()
+
+    if __name__=='__main__':
+    listener()
